@@ -25,3 +25,5 @@ topics.forEach((topicItem) => {
     window.location = `/agent/${topic}`;
   });
 });
+
+$(".js-modal-btn").modalVideo();

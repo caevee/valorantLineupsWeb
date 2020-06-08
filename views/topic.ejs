@@ -1,3 +1,25 @@
 <%- include("partials/header") %>
-<h1><%= topic.title %></h1>
+<div class="container">
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <% topic.subTopics.forEach(subTopic => { %>
+        <a class="nav-item nav-link" id="nav-<%=subTopic.title%>-tab" data-toggle="tab" href="#nav-<%=subTopic.title%>" role="tab" aria-controls="nav-<%=subTopic.title%>" aria-selected="true"><%=subTopic.title%></a>
+        <% }) %>
+    </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <% for( let i = 0; i < topic.subTopics.length; i++ ) { %>
+        <div class="tab-pane fade" id="nav-<%=topic.subTopics[i].title%>" role="tabpanel" aria-labelledby="nav-<%=topic.subTopics[i].title%>-tab">
+            <div class="btn-group" role="group" aria-label="videos">
+            <% for( let j = 0; j < topic.subTopics[i].videos.length; j++ ) { %>
+                <button data-video-id="<%=  topic.subTopics[i].videos[j].url.replace('https://youtu.be/', '') %>" type="button" class="btn btn-secondary js-modal-btn"><%= topic.subTopics[i].videos[j].title %> </button>
+                <p><%=  topic.subTopics[i].videos[j].url.replace("https://youtu.be/", "") %></p>
+            <% } %>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+
 <%- include("partials/footer") %>
