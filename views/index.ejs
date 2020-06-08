@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+<div class="container">
+  <div class="row">
+    <% data.topics.forEach(topic => { %>
+    <!--
+    <div class="col-lg-4">
+      <p><%= topic.title%></p>
+      <img class="img-fluid" src="<%= topic.topicThumbnailUrl%>"></img>
+    </div>
+-->
+    <div class="col-lg-4">
+      <div class="card topic m-5" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= topic.title%></h5>
+        </div>
+        <img
+          class="card-img-top"
+          src="<%= topic.topicThumbnailUrl%>"
+          alt="Image of <%= topic.title%>'s ultimate ability"
+        />
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

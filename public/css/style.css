@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Valorant";
+  src: url("/fonts/Valorant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #ebe8e2;
+  color: #111920;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  background-color: #111920;
+  color: #ebe8e2;
+}
+
+footer div {
+  color: #ea575b;
+}
+
+footer a {
+  color: #ebe8e2;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #ebe8e2;
+}
+
+.jumbotron {
+  background-color: #111920;
+  font-family: "Valorant", sans-serif;
+}
+
+.jumbotron h1 {
+  color: #ea575b;
+}
+
+.jumbotron p {
+  color: #ebe8e2;
+}
+
+.card {
+  background: none;
+  border: none;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-title {
+  text-align: center;
+}
+
+h1 a {
+  color: #ea575b;
+}
+
+h1 a:hover {
+  color: #ea575b;
+  text-decoration: none;
+}
