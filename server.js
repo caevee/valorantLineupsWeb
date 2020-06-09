@@ -1,6 +1,6 @@
 const express = require("express");
 const https = require("https");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const data = require(`${__dirname}/data.json`);
 const bodyParser = require("body-parser");
