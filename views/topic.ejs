@@ -1,13 +1,14 @@
 <%- include("partials/header") %>
 <div class="container">
 <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
         <% topic.subTopics.forEach(subTopic => { %>
         <a class="nav-item nav-link" id="nav-<%=subTopic.title%>-tab" data-toggle="tab" href="#nav-<%=subTopic.title%>" role="tab" aria-controls="nav-<%=subTopic.title%>" aria-selected="true"><%=subTopic.title%></a>
         <% }) %>
     </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
+        
         <% for( let i = 0; i < topic.subTopics.length; i++ ) { %>
         <div class="tab-pane fade" id="nav-<%=topic.subTopics[i].title%>" role="tabpanel" aria-labelledby="nav-<%=topic.subTopics[i].title%>-tab">
             <div class="btn-group" role="group" aria-label="videos">
