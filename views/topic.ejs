@@ -11,14 +11,14 @@
         
         <% for( let i = 0; i < topic.subTopics.length; i++ ) { %>
         <div class="tab-pane fade" id="nav-<%=topic.subTopics[i].title%>" role="tabpanel" aria-labelledby="nav-<%=topic.subTopics[i].title%>-tab">
-            <div class="btn-group" role="group" aria-label="videos">
+            <div class="btn-group-vertical w-100 mt-5 mb-5">
             <% for( let j = 0; j < topic.subTopics[i].videos.length; j++ ) { %>
                 <button data-video-id="<%=  topic.subTopics[i].videos[j].url.replace('https://youtu.be/', '') %>" type="button" class="btn btn-secondary js-modal-btn"><%= topic.subTopics[i].videos[j].title %> </button>
-                <p><%=  topic.subTopics[i].videos[j].url.replace("https://youtu.be/", "") %></p>
             <% } %>
             </div>
         </div>
         <% } %>
+
     </div>
 </div>
 

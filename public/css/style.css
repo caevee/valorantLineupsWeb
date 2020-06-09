@@ -81,3 +81,25 @@ body {
   line-height: 60px; /* Vertically center the text there */
   background-color: #111920;
 }
+
+.nav-link {
+  color: #ea575b;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #111920;
+}
+
+/* IDK why the fuck they still have a blue outline.. gotta fix later*/
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited,
+.btn-secondary:focus,
+.btn-secondary:active:focus {
+  background-color: #111920 !important;
+  border-color: #111920 !important;
+  color: #ea575b;
+  font-weight: 700;
+}
