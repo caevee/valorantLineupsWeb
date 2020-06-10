@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about", { data: data });
+});
+
 // Dynamic Route to open agent pages
 app.get("/agent/:topic", (req, res) => {
   // *1* If not set variable to render a 404 page

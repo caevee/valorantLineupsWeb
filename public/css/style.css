@@ -24,9 +24,18 @@ footer a {
   color: #ebe8e2;
 }
 
-footer a:hover {
+.lead a {
+  color: #ea575b;
+}
+
+footer a:first-child {
+  margin-right: 5%;
+}
+
+footer a:hover,
+.lead a:hover {
   text-decoration: none;
-  color: #ebe8e2;
+  color: #ea575b;
 }
 
 .jumbotron {
@@ -102,4 +111,14 @@ body {
   border-color: #111920 !important;
   color: #ea575b;
   font-weight: 700;
+}
+
+.about {
+  margin-top: 50px;
+  margin-bottom: 130px;
+}
+
+.about-header {
+  font-family: "Valorant", sans-serif;
+  color: #ea575b;
 }
