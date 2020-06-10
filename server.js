@@ -26,6 +26,10 @@ app.get("/about", (req, res) => {
   res.render("about", { data: data });
 });
 
+app.get("/riot.txt", (req, res) => {
+  res.sendFile("riot.txt");
+});
+
 // Dynamic Route to open agent pages
 app.get("/agent/:topic", (req, res) => {
   // *1* If not set variable to render a 404 page
