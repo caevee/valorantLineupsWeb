@@ -26,8 +26,8 @@ app.get("/about", (req, res) => {
   res.render("about", { data: data });
 });
 
-app.get("/riot.txt", (req, res) => {
-  res.sendFile(__dirname + "//riot.txt");
+app.get("//riot.txt", (req, res) => {
+  res.sendFile(__dirname + "/riot.txt");
 });
 
 // Dynamic Route to open agent pages
