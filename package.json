@@ -4,7 +4,7 @@
   "description": "Web port for the iOS App Setups for Valorant",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node getData.js && node server.js"
   },
   "repository": {
     "type": "git",
