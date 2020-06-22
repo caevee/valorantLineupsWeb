@@ -12,7 +12,7 @@ const data = axios.get("https://raw.githubusercontent.com/LucaKaufmann/video-dat
 
 data
     .then((data) => {
-        fs.writeFileSync('data.json', JSON.stringify(data));
+        fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data));
     })
     .catch(err => console.log(err)
     );
