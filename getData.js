@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require('fs');
 
-const data = axios.get("https://raw.githubusercontent.com/LucaKaufmann/video-data/master/v2/data.json")
+const data = axios.get("https://raw.githubusercontent.com/caevee/video-data/master/v2/data.json")
     .then(function (response) {
         console.log(response.data);
         return response.data;
@@ -13,7 +13,7 @@ const data = axios.get("https://raw.githubusercontent.com/LucaKaufmann/video-dat
 data
     .then((data) => {
         if (data !== undefined) {
-            fs.writeFileSync(__dirname + '/data.json', data);
+            fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data));
         }
     })
     .catch(err => console.log(err)
